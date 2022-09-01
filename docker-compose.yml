@@ -1,0 +1,32 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    restart: always
+  
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - 80:80
+    environment:
+      - VUE_APP_BACKEND_URL=http://localhost:8080
+    
+  db:
+    build: ./mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: SA_GAME
+      MONGO_INITDB_ROOT_PASSWORD: SA_PASSWORD
+      MONGO_INITDB_DATABASE: SA_DB
+    ports:
+     - 27017:27017
+    volumes:
+      - db-data:/data/db
+
+
+volumes:
+  db-data:
