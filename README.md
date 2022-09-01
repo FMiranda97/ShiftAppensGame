@@ -8,6 +8,8 @@ It was written in a Vue + Express + MongoDB stack and has been dockerized so you
  - git clone https://github.com/FMiranda97/ShiftAppensGame.git
  - cd ShiftAppensGame
  - docker compose up -d
+ 
+Once it's ready you can view the website at http://localhost.
 
 ### I want to use this on my own event, what do I need to do?
 If you have docker installed this is a very easy task, as I said, this app is deployment ready. 
