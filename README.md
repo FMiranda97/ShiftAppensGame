@@ -6,6 +6,7 @@ This is a deployment ready challenge manager web app for events. It was develope
 
 It was written in a Vue + Express + MongoDB stack and has been dockerized so you can easily preview it. If you have Docker and git installed you can easily run this website locally by cloning the repository and activating the docker-compose file. To do that open a terminal and run the following commands:
  - git clone https://github.com/FMiranda97/ShiftAppensGame.git
+ - cd ShiftAppensGame
  - docker compose up -d
 
 ### I want to use this on my own event, what do I need to do?
