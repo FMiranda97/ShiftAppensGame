@@ -9,6 +9,10 @@ It was written in a Vue + Express + MongoDB stack and has been dockerized so you
  - docker compose up -d
 
 ### I want to use this on my own event, what do I need to do?
-If you have docker installed this is a very easy task, as I said, this app is deployment ready. You need to edit environment variables, specifically those found in /backend/.env, /frontend/.env.production and /docker-compose.yml to have into account the external IPs of the machine you're deploying your app on and edit the credentials for safety since those in this repository are public.
+If you have docker installed this is a very easy task, as I said, this app is deployment ready. 
+
+Before you run docker compose you need to edit environment variables, specifically those found in /backend/.env, /frontend/.env.production and /docker-compose.yml to have into account the external IPs of the machine you're deploying your app on and edit the credentials for safety since those in this repository are public.
 
 You may also want to delete the contents of /mongodb/init.js as it initializes the database with fake data for previsualization purposes.
+
+Once this is done just run "**docker compose up -d**".
